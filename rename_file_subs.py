@@ -8,10 +8,12 @@ if len(sys.argv) != 3:
 else:
 	print("This script will rename the following files:")
 	file2rename = list()
-	for i, f in enumerate(sorted(os.listdir(os.getcwd()))):
+	i = 0
+	for f in sorted(os.listdir(os.getcwd())):
 		if f.find(sys.argv[1]) != -1:
 			file2rename.append(f)
 			print file2rename[i]
+			i += 1
 
 	print("***")
 	print("Into:")
